@@ -1,15 +1,20 @@
 {
-  "gioHang": [],
+  "gioHang": [
+    {
+      "id": "11",
+      "soLuong": 3
+    }
+  ],
   "donHang": [
     {
-      "id": 0,
+      "id": "0",
       "idSanPham": "11",
       "ten": "a1123",
       "SDT": "23",
       "diaChi": "1234"
     },
     {
-      "id": 1,
+      "id": "1",
       "idSanPham": "11",
       "ten": "qưe",
       "SDT": "12345",
