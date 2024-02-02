@@ -1,0 +1,35 @@
+<!-- Khu vực tiêu đề trang -->
+<h3>Chi tiết giỏ hàng</h3>
+
+<!-- Khu vực button chính -->
+<!-- <div class="d-flex justify-content-end">
+    <a href="#!taoMoi-sanPham" class="btn btn-success">Tạo mới</a>
+</div> -->
+
+<!-- Khu vực bảng -->
+<table class="table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Tên</th>
+            <th>Ảnh</th>
+            <th>Giá</th>
+            <th>Số lượng</th>
+            <th>Tổng tiền</th>
+            
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr>
+
+            <td> {{gioHang.id}}</td>
+            <td> {{gioHang.ten}}</td>
+            <td> <img src="{{gioHang.anh || gioHang.anh[0]}}" alt="" height="150px"></td>
+            <td> {{gioHang.gia}}</td>
+            <td> 1</td>
+            <td> {{gioHang.gia}}</td>
+            
+        </tr>
+    </tbody>
+</table>

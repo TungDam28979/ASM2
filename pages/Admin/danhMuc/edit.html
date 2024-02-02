@@ -1,0 +1,29 @@
+<!-- <h3> trang taoj moi</h3> -->
+
+<!-- khu vuc tieu de trang -->
+<h3> chinh sua san pham</h3>
+
+<!-- khu vuc noi dung form -->
+<form action="">
+    <!-- khu vuc id -->
+    <div>
+        <span class="form-label">ID: </span>
+        <input ng-model="danhMuc.id" class="form-control" type="text" disabled>
+    </div>
+     <!-- khu vuc name -->
+     <div>
+        <span class="form-label">Ten: </span>
+        <input ng-model="danhMuc.name"class="form-control" type="text">
+    </div>
+     <!-- khu vuc price -->
+    
+    <div class="mt-2">
+        <button ng-click="onClickEdit()" class="btn btn-success"> Chinh sua</button>
+        <a href="#!danhSach-danhMuc" class="btn btn-secondary">Quay Lại</a>
+    </div>
+
+    <!-- khu vuc thong bao loi -->
+    <div class="alert alert-danger mt-1" ng-hide="formStatus">
+       {{formMessage}}
+    </div>
+</form>

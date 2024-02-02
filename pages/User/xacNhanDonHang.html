@@ -1,0 +1,75 @@
+<!-- Khu vực tiêu đề trang -->
+<h3>Xác nhận đơn hàng</h3>
+
+<!-- Khu vực button chính -->
+<!-- <div class="d-flex justify-content-end">
+    <a href="#!taoMoi-sanPham" class="btn btn-success">Tạo mới</a>
+</div> -->
+
+<!-- Khu vực bảng -->
+<table class="table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Tên</th>
+            <th>Ảnh</th>
+            <th>Giá</th>
+            <th>Số lượng</th>
+            <th>Tổng tiền</th>
+            
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr>
+
+            <td> {{sanPham.id}}</td>
+            <td> {{sanPham.ten}}</td>
+            <td> <img src="{{sanPham.anh || sanPham.anh[0]}}" alt="" height="150px"></td>
+            <td> {{sanPham.gia}}</td>
+            <td> 1</td>
+            <td> {{sanPham.gia}}</td>
+            
+        </tr>
+    </tbody>
+</table>
+
+<!-- <h3> trang taoj moi</h3> -->
+
+<!-- khu vuc tieu de trang -->
+<h3> Thông tin khách hàng</h3>
+
+<!-- khu vuc noi dung form -->
+<form action="">
+    <!-- khu vuc id -->
+    <div>
+        <span class="form-label">Tên </span>
+        <input ng-model="donHang.ten" class="form-control" type="text">
+    </div>
+     <!-- khu vuc name -->
+     <div>
+        <span class="form-label">Số điện thoại </span>
+        <input ng-model="donHang.SDT"class="form-control" type="text">
+    </div>
+     <!-- khu vuc price -->
+     <div>
+        <span class="form-label">Địa chỉ: </span>
+        <input ng-model="donHang.diaChi" class="form-control" type="text">
+    </div>
+    
+
+   
+
+   
+    
+
+    <div class="mt-2">
+        <button ng-click="onClickCreate()" class="btn btn-success"> Xac nhan</button>
+        <a href="#!danhSach-sanPham" class="btn btn-warning">Quay lai</a>
+    </div>
+
+    <!-- khu vuc thong bao loi -->
+    <div class="alert alert-danger mt-1" ng-hide="formStatus">
+       {{formMessage}}
+    </div>
+</form>

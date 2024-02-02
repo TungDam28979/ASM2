@@ -1,0 +1,95 @@
+{
+  "gioHang": [],
+  "donHang": [
+    {
+      "id": 0,
+      "idSanPham": "11",
+      "ten": "a1123",
+      "SDT": "23",
+      "diaChi": "1234"
+    },
+    {
+      "id": 1,
+      "idSanPham": "11",
+      "ten": "qưe",
+      "SDT": "12345",
+      "diaChi": "12345"
+    }
+  ],
+  "danhMuc": [
+    {
+      "id": "2",
+      "name": "sach a"
+    },
+    {
+      "id": "2",
+      "name": "wwwwwwwwww"
+    },
+    {
+      "id": "3",
+      "name": "eeeeeeeeeeeeee"
+    },
+    {
+      "id": "44",
+      "name": "sach b"
+    }
+  ],
+  "sanPham": [
+    {
+      "id": "11",
+      "ten": "qwertyu",
+      "anh": "https://salt.tikicdn.com/ts/product/5e/18/24/2a6154ba08df6ce6161c13f4303fa19e.jpg",
+      "gia": "111111111",
+      "chiTiet": "aaaaaaaaaaaaaaaaaaaaaaaa11111111",
+      "danhMuc": "Binh Hoa"
+    },
+    {
+      "id": "123",
+      "ten": "qqqqqqqqqqqq",
+      "anh": "https://tusachconggiao.com/wp-content/uploads/2019/02/nguoi-dam-cho-di.jpg.webp",
+      "gia": "22222222222",
+      "chiTiet": "rrrrrrrrrrrrrrrrrrrrrrrr",
+      "danhMuc": "Binh Hoa"
+    },
+    {
+      "id": "444444",
+      "ten": "rrrrrrrrrrrrrrrrr",
+      "anh": "https://cdn0.fahasa.com/media/flashmagazine/images/page_images/nguoi_dam_cho_di_ban_duoc_nhieu_hon/2020_04_28_15_26_04_1-390x510.JPG",
+      "gia": "4444444444444",
+      "chiTiet": "tttttttttttttttttttt",
+      "danhMuc": ""
+    },
+    {
+      "id": "1111111111111",
+      "ten": "1111111111111111",
+      "anh": "",
+      "gia": "111111111111111",
+      "chiTiet": "111111111111",
+      "danhMuc": ""
+    },
+    {
+      "id": "1",
+      "ten": "1",
+      "anh": "",
+      "gia": "11111111111111",
+      "chiTiet": "qqqqqqqqqqqqqqqq",
+      "danhMuc": ""
+    },
+    {
+      "id": "11111111111",
+      "ten": "112222222222",
+      "anh": "111111222222222333333333",
+      "gia": "111111111111111111111111",
+      "chiTiet": "qqqqqqqqqqqq",
+      "danhMuc": ""
+    },
+    {
+      "id": "1",
+      "ten": "1",
+      "anh": "1",
+      "gia": "11111111111",
+      "chiTiet": "1",
+      "danhMuc": "wwwwwwwwww"
+    }
+  ]
+}

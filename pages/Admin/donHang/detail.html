@@ -1,0 +1,45 @@
+<!-- Khu vực tiêu đề trang -->
+<h3>Chi tiết sản phẩm</h3>
+
+<!-- Khu vực nội dung form -->
+<form>
+    <!-- Khu vực id -->
+    <div class="mt-3">
+        <span class="form-label">ID:</span>
+        <input ng-model="product.id" class="form-control" type="text" disabled>
+    </div>
+
+    <!-- Khu vực name -->
+    <div class="mt-3">
+        <span class="form-label">Tên:</span>
+        <input ng-model="product.name" class="form-control" type="text" disabled>
+    </div>
+
+    <!-- Khu vực price -->
+    <div class="mt-3">
+        <span class="form-label">Giá:</span>
+        <input ng-model="product.price" class="form-control" type="text" disabled>
+    </div>
+
+    <!-- Khu vực category -->
+    <div class="mt-3">
+        <span class="form-label">Danh Mục:</span>
+        <select ng-model="product.category" class="form-control" disabled>
+            <option value="">- Lựa Chọn -</option>
+            <option value="Bình Hoa TC"> Bình Hoa TC</option>
+            <option value="Đồ Bếp TC"> Đồ Bếp TC</option>
+            <option value="Đồ Nhà Tắm TC"> Đồ Nhà Tắm TC</option>
+        </select>
+    </div>
+
+    <!-- Khu vực button -->
+    <div class="mt-3">
+        <a href="#!list-product" class="btn btn-secondary">Quay Lại</a>
+        <a href="#!edit-product/{{product.id}}" class="btn btn-warning">Chỉnh Sửa</a>
+    </div>
+
+    <!-- Khu vực thông báo lỗi -->
+    <!-- <div class="alert alert-danger mt-1" ng-hide="formStatus">
+        {{formMessage}}
+    </div> -->
+</form>

@@ -1,0 +1,28 @@
+<div class="row" >
+
+    <div class="col-3 mb-3" ng-repeat="item in trangChu">
+        <a class="col-3 mb-3" href="#!chiTiet-sanPham/{{item.id}}" class="btn btn-primary" style="text-decoration: none ;">
+            <div style="height: 430px;">
+                <div class="border rounded overflow-hidden ">
+                    <div class="bg-light d-flex justify-content-center align-items-center " style="height: 400px;">
+
+                        <div><img src="{{item.anh}}" alt="" class="mw-100 mh-100"></div>
+
+                    </div>
+                    <!-- <div><img src="img/black-friday.webp" alt="" class="mw-100 mh-100"></div> -->
+                </div>
+
+
+                <p class="h6">{{item.ten}}</p>
+
+
+            </div>
+            <!-- <div class="d-flex justify-content-between">
+            
+            <span class="fw-bold ">{{item.gia}}</span>
+        </div> -->
+            <p class="h6">{{item.gia}}</p>
+        </a>
+    </div>
+
+</div>

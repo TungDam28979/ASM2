@@ -1,0 +1,51 @@
+<!-- <h3> trang taoj moi</h3> -->
+
+<!-- khu vuc tieu de trang -->
+<h3> chinh sua san pham</h3>
+
+<!-- khu vuc noi dung form -->
+<form action="">
+    <!-- khu vuc id -->
+    <div>
+        <span class="form-label">ID: </span>
+        <input ng-model="sanPham.id" class="form-control" type="text" disabled>
+    </div>
+     <!-- khu vuc name -->
+     <div>
+        <span class="form-label">Ten: </span>
+        <input ng-model="sanPham.ten"class="form-control" type="text">
+    </div>
+
+    <div>
+        <span class="form-label">Anh: </span>
+        <input ng-model="sanPham.anh"class="form-control" type="text">
+    </div>
+     <!-- khu vuc price -->
+     <div>
+        <span class="form-label">Gia: </span>
+        <input ng-model="sanPham.gia" class="form-control" type="text">
+    </div>
+
+    <div>
+        <span class="form-label">Chi tiet: </span>
+        <input ng-model="sanPham.chiTiet"class="form-control" type="text">
+    </div>
+
+    <!-- khu vuc category -->
+    <div >
+        <span class="form-label">Danh muc: </span>
+        <select ng-model="sanPham.danhMuc" class="form-control"  >
+            <option ng-repeat="item in danhSachDanhMuc" value="">{{item.name}}</option>
+            
+        </select>
+    </div>
+    <div class="mt-2">
+        <button ng-click="onClickEdit()" class="btn btn-success"> Chinh sua</button>
+        <a href="#!danhSach-sanPham" class="btn btn-secondary">Quay Lại</a>
+    </div>
+
+    <!-- khu vuc thong bao loi -->
+    <div class="alert alert-danger mt-1" ng-hide="formStatus">
+       {{formMessage}}
+    </div>
+</form>

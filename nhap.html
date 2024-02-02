@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <script src="lib/angular.js"></script>
+    <script src="lib/angular-route.js"></script>
+    <link rel="stylesheet" href="lib/bootstrap.css">
+    <script src="lib/bootstrap.js"></script>
+    <script>
+        var app = angular.module('myApp', ['ngRoute'])
+        //khai bao $routeProvider
+        app.config(function ($routeProvider) {
+            $routeProvider
+                .when('/list-product', {
+                    templateUrl: 'pages/product/list.html',
+                    controller: "listProductCtrl"
+                })
+                .when('/create-product', {
+                    templateUrl: 'pages/product/create.html',
+                    controller: "createProductCtrl"
+                })
+                .when('/detail-product/:id', {
+                    templateUrl: 'pages/product/detail.html',
+                    controller: "detailProductCtrl"
+                })
+                .when('/edit-product/:id', {
+                    templateUrl: 'pages/product/edit.html',
+                    controller: "editProductCtrl"
+                })
+        })
+    </script>
+    <!-- nhung cac file js khai bao controller -->
+    <!-- chu y : nhung sau khu vuc khoi tao ng-app -->
+    <script src="pages/product/list.js"></script>
+    <script src="pages/product/detail.js"></script>
+    <script src="pages/product/create.js"></script>
+    <script src="pages/product/edit.js"></script>
+</head>
+
+<body ng-app="myApp">
+    <nav class="navbar navbar-expand-sm bg-light">
+        <div class="container">
+            
+
+                <ul class="nav flex-column nav-pills">
+
+                    <li class="nav-item">
+                        <a class="nav-link " href="#!list-product">TRang danh sach</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="#!create-product">TRang tao moi</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="#!detail-product/Sp01">TRang chi tiet</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="#!edit-product/sp01">TRang chinh sua</a>
+                    </li>
+                </ul>
+            
+    </nav>
+
+    <div class="container">
+        <div ng-view></div>
+    </div>
+   
+</body>
+
+</html>

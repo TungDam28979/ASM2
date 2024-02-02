@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout trang admin</title>
+
+    <script src="lib/angular.js"></script>
+    <script src="lib/angular-route.js"></script>
+    <link rel="stylesheet" href="lib/bootstrap.css">
+    <script src="lib/bootstrap.js"></script>
+    <script>
+        var app = angular.module('myApp', ['ngRoute'])
+        //khai bao $routeProvider
+        app.config(function ($routeProvider) {
+            $routeProvider
+                .when('/danhSach-danhMuc', {
+                    templateUrl: 'pages/Admin/danhMuc/list.html',
+                    controller: "danhSachDanhMucCtrl"
+                })
+                .when('/taoMoi-danhMuc', {
+                    templateUrl: 'pages/Admin/danhMuc/create.html',
+                    controller: "taoMoiDanhMucCtrl"
+                })
+                .when('/chiTiet-danhMuc/:id', {
+                    templateUrl: 'pages/Admin/danhMuc/detail.html',
+                    controller: "chiTietDanhMucCtrl"
+                })
+                .when('/chinhSua-danhMuc/:id', {
+                    templateUrl: 'pages/Admin/danhMuc/edit.html',
+                    controller: "chinhSuaDanhMucCtrl"
+                })
+                .when('/danhSach-sanPham', {
+                    templateUrl: 'pages/Admin/sanPham/list.html',
+                    controller: "danhSachSanPhamCtrl"
+                })
+                .when('/taoMoi-sanPham', {
+                    templateUrl: 'pages/Admin/sanPham/create.html',
+                    controller: "taoMoiSanPhamCtrl"
+                })
+                .when('/chiTiet-sanPham/:id', {
+                    templateUrl: 'pages/Admin/sanPham/detail.html',
+                    controller: "chiTietSanPhamCtrl"
+                })
+                .when('/chinhSua-sanPham/:id', {
+                    templateUrl: 'pages/Admin/sanPham/edit.html',
+                    controller: "chinhSuaSanPhamCtrl"
+                })
+                .when('/danhSach-donHang', {
+                    templateUrl: 'pages/Admin/donHang/list.html',
+                    controller: "danhSachDonHangCtrl"
+                })
+                .when('/chiTiet-donHang/:id', {
+                    templateUrl: 'pages/Admin/donHang/detail.html',
+                    controller: "chiTietDonHangCtrl"
+                })
+                .when('/chinhSua-donHang/:id', {
+                    templateUrl: 'pages/Admin/donHang/edit.html',
+                    controller: "chinhSuaDonHangCtrl"
+                })
+                
+        })
+    </script>
+    <!-- nhung cac file js khai bao controller -->
+    <!-- chu y : nhung sau khu vuc khoi tao ng-app -->
+    <script src="pages/Admin/danhMuc/list.js"></script>
+    <script src="pages/Admin/danhMuc/detail.js"></script>
+    <script src="pages/Admin/danhMuc/create.js"></script>
+    <script src="pages/Admin/danhMuc/edit.js"></script>
+
+    <script src="pages/Admin/sanPham/list.js"></script>
+    <script src="pages/Admin/sanPham/detail.js"></script>
+    <script src="pages/Admin/sanPham/create.js"></script>
+    <script src="pages/Admin/sanPham/edit.js"></script>
+
+</head>
+
+<body ng-app="myApp">
+    
+    <nav class="navbar navbar-expand-sm bg-light shadow">
+        <div class="container-fluid">
+            <!-- Logo -->
+            <a href="">
+                <img src="img/Rectangle (4).png" style="max-height: 40px;">
+            </a>
+
+            <!-- Thông tin user -->
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link disabled text-dark" href="#">Xin chào Username</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Đăng xuất</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+
+
+    <div class="container">
+
+        <div id="demo" class="carousel slide" data-bs-ride="carousel">
+
+            <!-- Indicators/dots -->
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+                <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+
+            </div>
+
+            <!-- The slideshow/carousel -->
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="/img/Rectangle (5).png" alt="Los Angeles" class="d-block w-100">
+                </div>
+                <div class="carousel-item">
+                    <img src="/img/Rectangle (5).png" alt="Chicago" class="d-block w-100">
+                </div>
+
+            </div>
+
+            <!-- Left and right controls/icons -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </button>
+        </div>
+
+
+
+
+        <div class="d-flex">
+            <!-- Khu vực menu -->
+            <div class="bg-light p-2" style="width: 250px; min-height: calc(100vh - 56px);">
+                <ul class="nav flex-column nav-pills">
+
+                    <li class="nav-item">
+                        <a class="nav-link " href="#!danhSach-danhMuc">Quản lý danh mục sản phẩm</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="#!danhSach-sanPham">Quản lý sản phẩm</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="#!danhSach-donHang">Quản lý đơn hàng</a>
+                    </li>
+                    
+                </ul>
+            </div>
+
+            <div class="container">
+
+                  <div ng-view></div>
+            </div>
+          
+
+
+
+
+
+        </div>
+    </div>
+
+
+    <div class="footer bg-light d-flex justify-content-evenly">
+        <div class="row">
+            <div class="col-6">
+                <div class="tieude">
+                    <h4>CÔNG TY TNHH FPOLY</h4>
+                    <ul class="ps-4">
+                        <li>Địa chỉ: xxxxxNguyễn Trung Trực, khu phố 5, - Phường Dương Đông - Thành phố Phú Quốc - Kiên
+                            Giang</li>
+                        <li>Hotline: 0938716xxx</li>
+                        <li>Email: phuqxxxxvel2@gmail.com</li>
+                        <li>Website: dulichbxxxx</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="row">
+                    <div class="col-6">
+                        <div class="tieude">
+                            <h4>CHÍNH SÁCH</h4>
+                            <ul class="chinhsach ps-0">
+                                <li><a href="">Địa điểm sống ảo đẹp nhất phú quốc</a></li>
+                                <li><a href="">Dịch vụ cho thuê tàu, cano</a></li>
+                                <li><a href="">Bảng giá phòng resort, khách sạn</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="tieude">
+                            <h4>FANPAGE</h4>
+                            <div class="fanpage ">
+                                <a href="https://www.facebook.com/" class="pe-3"><img
+                                        src="images/blue-social-media-logo_footer1.avif" alt=""></a>
+                                <a href="https://www.instagram.com/accounts/login/?hl=en" class="pe-3"><img
+                                        src="images/instagram-icon_1057-2227-footer2.avif" alt=""></a>
+                                <a href="https://twitter.com/?lang=en" class=""><img
+                                        src="images/580b57fcd9996e24bc43c53e-footer3.png" alt=""></a>
+                                <a href="https://zalo.me/pc" class=""><img src="images/zalo-icon-footer3.png"
+                                        alt=""></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

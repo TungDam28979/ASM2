@@ -1,0 +1,33 @@
+<!-- Khu vực tiêu đề trang -->
+<h3>Chi tiết sản phẩm</h3>
+
+<!-- Khu vực nội dung form -->
+<form>
+    <!-- Khu vực id -->
+    <div class="mt-3">
+        <span class="form-label">ID:</span>
+        <input ng-model="danhMuc.id" class="form-control" type="text" disabled>
+    </div>
+
+    <!-- Khu vực name -->
+    <div class="mt-3">
+        <span class="form-label">Tên:</span>
+        <input ng-model="danhMuc.name" class="form-control" type="text" disabled>
+    </div>
+
+    <!-- Khu vực price -->
+    
+    <!-- Khu vực category -->
+    
+
+    <!-- Khu vực button -->
+    <div class="mt-3">
+        <a href="#!danhSach-danhMuc" class="btn btn-secondary">Quay Lại</a>
+        <a href="#!chinhSua-danhMuc/{{danhMuc.id}}" class="btn btn-warning">Chỉnh Sửa</a>
+    </div>
+
+    <!-- Khu vực thông báo lỗi -->
+    <!-- <div class="alert alert-danger mt-1" ng-hide="formStatus">
+        {{formMessage}}
+    </div> -->
+</form>
